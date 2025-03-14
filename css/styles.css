@@ -1,0 +1,313 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #fbd3e9, #bbdefb);
+    color: #444;
+    text-align: center;
+}
+
+/* Estilos del menú de navegación */
+header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Menú */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d63384;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #fbd3e9;
+    border-radius: 8px;
+}
+
+/* Botón de menú en móvil */
+.menu-btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #d63384;
+}
+
+/* Sección de inicio */
+.hero {
+    background: url("/img/foto2.jpg") center/cover no-repeat;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #d63384;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+button {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+}
+
+.hero h1, .hero p, .hero button {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+
+}
+
+.timeline {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.timeline h2 {
+    font-size: 2rem;
+    color: #d63384;
+}
+
+.timeline-item {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.date {
+    font-weight: bold;
+    color: #ff4d6d;
+}
+
+.gallery {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.2);
+}
+/* Sección Cuenta Regresiva */
+.countdown {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #fad0c4, #ff9a9e);
+    color: #fff;
+}
+
+.countdown h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 80px;
+}
+
+.time-box span {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.time-box p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .timer {
+        flex-wrap: wrap;
+    }
+
+    .time-box {
+        min-width: 60px;
+        padding: 10px;
+    }
+
+    .time-box span {
+        font-size: 1.5rem;
+    }
+}
+/* Estilo de la caja "Ver más" con imagen de fondo */
+/* Estilo de la caja "Ver más" con imagen de fondo */
+.see-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background: url('/img/cumple.jpg') center/cover no-repeat;
+}
+
+/* Oscurecimiento sutil para mejorar visibilidad del texto */
+.see-more::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* Enlace estilo botón */
+.see-more a {
+    display: inline-block;
+    padding: 6px 10px;
+    color: white;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+    background: none; /* Asegura que no tenga fondo */
+}
+
+/* Efecto hover */
+.see-more:hover::before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#exploreBtn a {
+    text-decoration: none; /* Quita la línea del enlace */
+    color: inherit; /* Usa el mismo color del botón */
+    display: block; /* Hace que ocupe todo el botón */
+    width: 100%; 
+    height: 100%;
+    text-align: center;
+    padding: 10px 0; /* Ajusta el centrado */
+}
+
+/* Sección de Galería Completa */
+#full-gallery {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+}
+
+#full-gallery h2 {
+    color: #ff4d6d;
+}
+
+#full-gallery .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
